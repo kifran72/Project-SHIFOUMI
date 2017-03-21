@@ -1,4 +1,5 @@
 #include <iostream>
+
 using namespace std;
 
 // Pierre==1 ; Feuille==2; Sciseau==3;
@@ -6,8 +7,8 @@ using namespace std;
 int main(int argc, char **argv)
 {
 
-int Joueur1;
-int Joueur2;    
+int Joueur1=0;
+int Joueur2=0;    
 int NbManches=3;    //Nombre de manche total
 int Manches=0;
 char Player1Name="";  //Nom du joueur 1
@@ -17,6 +18,8 @@ int ScoreJoueur1=0; //Score du joueur 1
 int ScoreJoueur2=0; //Score du joueur 2
 int a=0; // Borne exclue min du rand
 int b=4; // Borne exclue Max du rand
+
+
 
 
 int Regle(int Joueur1,int Joueur2) // Fonction de règle de jeu qui deffini le gagnant de la partie.
@@ -116,4 +119,6 @@ int Boot (int a, int b)
 
 
 
-}// end programme
+} // end programme
+
+
