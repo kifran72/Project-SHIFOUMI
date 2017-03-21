@@ -9,11 +9,14 @@ int main(int argc, char **argv)
 int Joueur1;
 int Joueur2;    
 int NbManches=3;    //Nombre de manche total
+int Manches=0;
 char Player1Name="";  //Nom du joueur 1
 char Player2Name=""; //Nom du joueur 2
 bool Resultat=0; // True pou joueur 1 et False Joueur 2
 int ScoreJoueur1=0; //Score du joueur 1
 int ScoreJoueur2=0; //Score du joueur 2
+int a=0; // Borne exclue min du rand
+int b=4; // Borne exclue Max du rand
 
 
 int Regle(int Joueur1,int Joueur2) // Fonction de règle de jeu qui deffini le gagnant de la partie.
@@ -33,9 +36,17 @@ int Regle(int Joueur1,int Joueur2) // Fonction de règle de jeu qui deffini le g
     else if(Joueur1=="3"|| Joueur2=="2") // Sciseau vs Feuille  Sciseau Win.
     { Resultat=true; }
 
-    if (Joueur1==Joueur2){ NbManches=NbManches-1; } // Egalité relancer une autre manches.
+    if (Joueur1==Joueur2)  // Egalité relancer une autre manches.
+        { 
+            NbManches=NbManches; 
+            cout>> "Egalité des joueurs Manche supplémentaire";
+        } 
 
 }
+
+
+
+
 
 int Score (bool Resultat) // Fonction de vie du joueur avec un bolléen en paramètre.
 {
@@ -43,21 +54,26 @@ int Score (bool Resultat) // Fonction de vie du joueur avec un bolléen en param
         {
             ScoreJoueur1=ScoreJoueur1 + 1;
             cout>>Player1Name"Gagne la manche";
+            Manche++;
         }
     else 
         {
             ScoreJoueur2=ScoreJoueur2 + 1;
             cout>>Player2Name"Gagne la manche ";
+            Manche++;
         }
 }
+
+
+
+
 int Win () // Fonction de recherche si le jeu est fini et cherche le Winner 
 {
-    if (NbManches==manche)
+    if (NbManches==Manche)
     {
         if (ScoreJoueur1>ScoreJoueur2)
         {
             cout>> Player1Name"Gagne le jeu";
-
         }
         else
         {
@@ -66,6 +82,9 @@ int Win () // Fonction de recherche si le jeu est fini et cherche le Winner
     }
 
 }
+
+
+
 
 
 int Initialisation () //Fonction d'Initialisation de la variable NbManches et du nom des joueurs.
@@ -87,6 +106,15 @@ cin>> Player2Name;
 }
 
 
-}// end programme
 
+
+int Boot (int a, int b)
+{
+    Joueur2=rand()%(b-a)+a;
+}
+
+
+
+
+}// end programme
 
