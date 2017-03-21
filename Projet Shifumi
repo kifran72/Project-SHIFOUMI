@@ -6,21 +6,15 @@ using namespace std;
 int main(int argc, char **argv)
 {
 
-int Choix1;
-int Choix2;
 int Joueur1;
-int Joueur2;
-int NbManches=3;
-char Player1Name="";
-char Player2Name="";
+int Joueur2;    
+int NbManches=3;    //Nombre de manche total
+char Player1Name="";  //Nom du joueur 1
+char Player2Name=""; //Nom du joueur 2
 bool Resultat=0; // True pou joueur 1 et False Joueur 2
 int ScoreJoueur1=0; //Score du joueur 1
 int ScoreJoueur2=0; //Score du joueur 2
 
-int Recuperation(int Choix1,int Choix2){
-
-
-}
 
 int Regle(int Joueur1,int Joueur2) // Fonction de règle de jeu qui deffini le gagnant de la partie.
 {
@@ -39,13 +33,37 @@ int Regle(int Joueur1,int Joueur2) // Fonction de règle de jeu qui deffini le g
     else if(Joueur1=="3"|| Joueur2=="2") // Sciseau vs Feuille  Sciseau Win.
     { Resultat=true; }
 
-    if (Joueur1==Joueur2){ NbManches=NbManches+1; } // Egalité relancer une autre manches.
+    if (Joueur1==Joueur2){ NbManches=NbManches-1; } // Egalité relancer une autre manches.
 
 }
 
 int Score (bool Resultat) // Fonction de vie du joueur avec un bolléen en paramètre.
 {
+    if (Resultat== true) 
+        {
+            ScoreJoueur1=ScoreJoueur1 + 1;
+            cout>>Player1Name"Gagne la manche";
+        }
+    else 
+        {
+            ScoreJoueur2=ScoreJoueur2 + 1;
+            cout>>Player2Name"Gagne la manche ";
+        }
+}
+int Win () // Fonction de recherche si le jeu est fini et cherche le Winner 
+{
+    if (NbManches==manche)
+    {
+        if (ScoreJoueur1>ScoreJoueur2)
+        {
+            cout>> Player1Name"Gagne le jeu";
 
+        }
+        else
+        {
+            cout>> Player2Name"Gagne le jeu";
+        }
+    }
 
 }
 
@@ -69,8 +87,6 @@ cin>> Player2Name;
 }
 
 
-
-
-}
+}// end programme
 
 
