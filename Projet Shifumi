@@ -4,48 +4,67 @@ using namespace std;
 
 // Pierre==1 ; Feuille==2; Sciseau==3;
 
-int main(int argc, char **argv)
+int main()
 {
 
 int Joueur1=0;
 int Joueur2=0;    
 int NbManches=3;    //Nombre de manche total
 int Manches=0;
-char Player1Name="";  //Nom du joueur 1
-char Player2Name=""; //Nom du joueur 2
-bool Resultat=0; // True pou joueur 1 et False Joueur 2
+int STARTTOUCHE=0;
+string Player1Name="";  //Nom du joueur 1
+string Player2Name=""; //Nom du joueur 2
+bool Resultat; // True pou joueur 1 et False Joueur 2
 int ScoreJoueur1=0; //Score du joueur 1
 int ScoreJoueur2=0; //Score du joueur 2
 int a=0; // Borne exclue min du rand
 int b=4; // Borne exclue Max du rand
+}
+
+int StartGame ()
+{
+    cout << "Hello , Bienvenue sur le jeu du shifumi"<< endl;
+    cout <<"Choix du mod de jeu "<<endl;
+    cout <<"Joueur vs Joeur TOUCHE 1"<<endl;
+    cin >> STATTOUCHE;
+    cout<<"joueur VS BOOT TOUCHE 2"<< endl;
+    cin >> STARTTOUCHE;
+
+    if (STARTTOUCHE==1){Initialisation();}
+    else if (STARTTOUCHE==2){}
+    else (STARTTOUCHE !=1 && !=2)
+    {
+        cin.ignore();
+        return 0;
+    }
 
 
-
+}
 
 int Regle(int Joueur1,int Joueur2) // Fonction de règle de jeu qui deffini le gagnant de la partie.
 {
-    if (Joueur1=="1"|| Joueur2=="2")  // Pierre vs Feuille  Pierre Lose.
+    if (Joueur1=="1"&& Joueur2=="2")  // Pierre vs Feuille  Pierre Lose.
     { Resultat=false; }
-    else if(Joueur1=="1"|| Joueur2=="3") // Pierre vs Sciseau  Pierre Win.
+    else if(Joueur1=="1"&& Joueur2=="3") // Pierre vs Sciseau  Pierre Win.
     { Resultat=true; }
 
-    if (Joueur1=="2"|| Joueur2=="1")  // Feuille vs Pierre  Feuille Win.
+    if (Joueur1=="2"&& Joueur2=="1")  // Feuille vs Pierre  Feuille Win.
     { Resultat=true; }
-    else if(Joueur1=="2"|| Joueur2=="3")  // Feuille vs Sciseau  Feuille Lose.
+    else if(Joueur1=="2"&& Joueur2=="3")  // Feuille vs Sciseau  Feuille Lose.
     { Resultat=false; }
 
-    if (Joueur1=="3"|| Joueur2=="1")  // Sciseau vs Pierre  Sciseau Lose.
+    if (Joueur1=="3"&& Joueur2=="1")  // Sciseau vs Pierre  Sciseau Lose.
     {Resultat=false;}
-    else if(Joueur1=="3"|| Joueur2=="2") // Sciseau vs Feuille  Sciseau Win.
+    else if(Joueur1=="3"&& Joueur2=="2") // Sciseau vs Feuille  Sciseau Win.
     { Resultat=true; }
 
     if (Joueur1==Joueur2)  // Egalité relancer une autre manches.
         { 
             NbManches=NbManches; 
-            cout>> "Egalité des joueurs Manche supplémentaire";
+            cout<< "Egalité des joueurs Manche supplémentaire";
         } 
 
-}
+
 
 
 
@@ -96,7 +115,7 @@ int Initialisation () //Fonction d'Initialisation de la variable NbManches et du
 cout<<"Saisir le nombre de manches pour gagner";
 cin>> NbManches;
 
-    while (NbManches>=30 || NbManches <=0){
+    while (NbManches>=30 && NbManches <=0){
         cout<<"Saisir le nombre de manches pour gagner";
         cin>> NbManches;
     }
@@ -116,9 +135,7 @@ int Boot (int a, int b)
     Joueur2=rand()%(b-a)+a;
 }
 
+// end programme
 
-
-
-} // end programme
 
 
