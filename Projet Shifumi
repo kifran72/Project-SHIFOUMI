@@ -4,22 +4,7 @@ using namespace std;
 
 // Pierre==1 ; Feuille==2; Sciseau==3;
 
-int main()
-{
 
-int Joueur1=0;
-int Joueur2=0;    
-int NbManches=3;    //Nombre de manche total
-int Manches=0;
-int STARTTOUCHE=0;
-string Player1Name="";  //Nom du joueur 1
-string Player2Name=""; //Nom du joueur 2
-bool Resultat; // True pou joueur 1 et False Joueur 2
-int ScoreJoueur1=0; //Score du joueur 1
-int ScoreJoueur2=0; //Score du joueur 2
-int a=0; // Borne exclue min du rand
-int b=4; // Borne exclue Max du rand
-}
 
 int StartGame ()
 {
@@ -135,7 +120,24 @@ int Boot (int a, int b)
     Joueur2=rand()%(b-a)+a;
 }
 
-// end programme
+// end 
+
+int main()
+{
+
+int Joueur1=0;
+int Joueur2=0;    
+int NbManches=3;    //Nombre de manche total
+int Manches=0;
+int STARTTOUCHE=0;
+string Player1Name="";  //Nom du joueur 1
+string Player2Name=""; //Nom du joueur 2
+bool Resultat; // True pou joueur 1 et False Joueur 2
+int ScoreJoueur1=0; //Score du joueur 1
+int ScoreJoueur2=0; //Score du joueur 2
+int a=0; // Borne exclue min du rand
+int b=4; // Borne exclue Max du rand
+}
 
 
 
