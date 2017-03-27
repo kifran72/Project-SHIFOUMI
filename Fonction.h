@@ -1,1 +1,0 @@
-//Fonction du projet Shifumi
