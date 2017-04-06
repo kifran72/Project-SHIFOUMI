@@ -30,16 +30,16 @@ class shifumi
                 {   
                     Resultat = 1;
                 }
-                else if (ChoixJoueur1 == feuille && ChoixJoueur2 == sciseau) // Feuille vs Sciseau  Feuille Lose.
+                else if (ChoixJoueur1 == "feuille" && ChoixJoueur2 == "sciseau") // Feuille vs Sciseau  Feuille Lose.
                 {
                     Resultat = 0;
                 }
 
-                if (ChoixJoueur1 == 3 && ChoixJoueur2 == 1) // Sciseau vs Pierre  Sciseau Lose.
+                if (ChoixJoueur1 == "sciseau" && ChoixJoueur2 == "pierre") // Sciseau vs Pierre  Sciseau Lose.
                 {
                     Resultat = 0;
                 }
-                else if (ChoixJoueur1 == 3 && ChoixJoueur2 == 2) // Sciseau vs Feuille  Sciseau Win.
+                else if (ChoixJoueur1 == "sciseau" && ChoixJoueur2 == "feuille") // Sciseau vs Feuille  Sciseau Win.
                 {
                     Resultat = 1;
                 }
@@ -48,7 +48,7 @@ class shifumi
             }
           
             
-        int Score(bool Resultat) // Fonction de vie du joueur avec un bolléen en paramètre.
+        int Score(int    Resultat) // Fonction de vie du joueur avec un bolléen en paramètre.
             {
                 
                 if (Resultat == 1)
