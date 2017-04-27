@@ -96,8 +96,8 @@ public:
 
     int Initialisation() //Fonction d'Initialisation de la variable NbManches et du nom des joueurs.
             {
-                int Player1Name;
-                int Player2Name;
+                string Player1Name;
+                string Player2Name;
                 int NbManches;
                 cout << "Saisir le nombre de manches pour gagner" << endl;
                 cin >> NbManches;
@@ -112,10 +112,8 @@ public:
                 cin >> Player1Name;
                 cout << "Nom du joueur 2" << endl;
                 cin >> Player2Name;
-            
-                return NbManches;
-                return Player1Name;
-                return Player2Name;
+
+                return 0;
             }
 
     int StartGame()
