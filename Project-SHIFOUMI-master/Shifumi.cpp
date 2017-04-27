@@ -20,13 +20,6 @@ class Shifumi
         string Player2Name;
 
 
-        Shifumi() {
-            NbManches = 0;
-            Manches = 0;
-            ScoreJoueur1 = 0;
-            ScoreJoueur2 = 0;
-
-        }
 
     
         void Regle(int ChoixJoueur1, int ChoixJoueur2) // Fonction de règle de jeu qui deffini le gagnant de la partie.
@@ -36,7 +29,7 @@ class Shifumi
                 {
                     Resultat = 0;
                 }
-                else if (ChoixJoueur1 == 1 && ChoixJoueur2 == 2) // Pierre vs Sciseau  Pierre Win.
+                else if (ChoixJoueur1 == 1 && ChoixJoueur2 == 3) // Pierre vs Sciseau  Pierre Win.
                 {
                     Resultat = 1;
                 }
@@ -77,10 +70,14 @@ class Shifumi
                     ScoreJoueur2++;
                     cout << Player2Name << ": Gagne la manche " << endl;
                 }
-              
+
+                cout << Player1Name << endl << endl <<  "N° manches: " << Manches << endl << "Score: " << ScoreJoueur1 << endl;
+                cout << Player2Name << endl << endl << "N° manches: " << Manches << endl << "Score: " << ScoreJoueur2 << endl;
+
+                Win();
             }
 
-        int Win(int NbManches, int Manches) // Fonction de recherche si le jeu est fini et cherche le Winner
+        int Win() // Fonction de recherche si le jeu est fini et cherche le Winner
             {
                 if (NbManches == Manches)
                 {
@@ -104,7 +101,13 @@ class Shifumi
         
 
 public:
+  Shifumi() {
+            NbManches = 1;
+            Manches = 1;
+            ScoreJoueur1 = 0;
+            ScoreJoueur2 = 0;
 
+        }
  int StartGame()
             {
                 int STARTTOUCHE;
@@ -157,11 +160,11 @@ public:
         int ChoixJoueur2;
 
 
-        for(Manches=0 ; Manches<NbManches ; Manches++)
+        for(Manches=1 ; Manches<=NbManches ; Manches++)
         {
-            cout << Player1Name << "1. pierre" << endl << "2. Feuille" << endl << "3. Ciseau" << endl;
+            cout << Player1Name << endl << "1. pierre" << endl << "2. Feuille" << endl << "3. Ciseau" << endl;
             cin >> ChoixJoueur1;
-            cout << Player1Name << "1. pierre" << endl << "2. Feuille" << endl << "3. Ciseau" << endl;
+            cout << Player2Name << endl << "1. pierre" << endl << "2. Feuille" << endl << "3. Ciseau" << endl;
             cin >> ChoixJoueur2;
 
             Regle(ChoixJoueur1, ChoixJoueur2);
