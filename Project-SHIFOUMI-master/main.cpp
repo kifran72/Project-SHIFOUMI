@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include "Shifumi.cpp"
 using namespace std;
 
@@ -6,8 +7,9 @@ using namespace std;
 
 int main()
     {
-    shifumi Shifumi;
-    Shifumi.StartGame();
+    Shifumi shifumi;
+    shifumi.StartGame();
+
     return 0; 
     }
 
