@@ -1,4 +1,7 @@
 #include <iostream>
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include <string>
 
 using namespace std;
@@ -127,7 +130,7 @@ public:
     void Initialisation(int STARTTOUCHE) //Fonction d'Initialisation de la variable NbManches et du nom des joueurs.
             {
 
-		if (STARTTOUCHE = 1) {
+		if (STARTTOUCHE == 1) {
 					cout << "Saisir le nombre de manches pour gagner" << endl;
 					cin >> NbManches;
 
@@ -145,7 +148,7 @@ public:
 					Game(STARTTOUCHE);
 				}
 
-		else (STARTTOUCHE = 2) {
+		else if (STARTTOUCHE == 2){
 			cout << "Saisir le nombre de manches pour gagner" << endl;
 			cin >> NbManches;
 			Player2Name = "BOT";
@@ -170,7 +173,7 @@ public:
         int ChoixJoueur1;
         int ChoixJoueur2;
 
-		if (STARTTOUCHE = 1) {
+		if (STARTTOUCHE == 1) {
 
 			for (Manches = 1; Manches <= NbManches; Manches++)
 			{
@@ -183,7 +186,7 @@ public:
 			}
 
 		}
-		else (STARTTOUCHE = 2) {
+		else if(STARTTOUCHE == 2) {
 
 			for (Manches = 1; Manches <= NbManches; Manches++)
 			{
